@@ -47,6 +47,7 @@ gulp.task('scripts', function() {
 		'src/template/libs/fancybox/dist/jquery.fancybox.js',
 		'src/template/libs/slick-carousel/slick/slick.js',
 		'src/template/libs/jquery.form-styler/dist/jquery.formstyler.js',
+		'src/template/libs/jquery-ui/jquery-ui.js'
 		])
 		.pipe(concat('libs.js')) 
 		.pipe(gulp.dest('src/template/scripts')); 
