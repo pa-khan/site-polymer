@@ -49,4 +49,41 @@ $(document).ready(function($) {
 	$('select').styler();
 
 	$('.news').tabs();
+
+
+	var order = {
+		btn_open: $('.order-btn-open'),
+		btn_close: $('.order-btn-close'),
+		block: $('.order'),
+		speed: 500,
+		open: function() {
+			this.block.slideDown(this.speed);
+		}, 
+		close: function() {
+			this.block.slideUp(this.speed);
+		}, 
+		scroll: function() {
+			$("html, body").animate({scrollTop: this.block.offset().top+"px"}, this.speed)
+		}
+	}
+	order.btn_open.click(function(event) {
+		order.open();
+		order.scroll();
+	});
+	order.btn_close.click(function(event) {
+		order.close();
+	});
+
+
+	var nav = $('.nav'),
+			navClass = 'nav_toggle',
+			hum = $('.hum'),
+			humClass = 'hum_toggle';
+
+	hum.click(function(event) {
+		hum.toggleClass(humClass);
+		nav.toggleClass(navClass);
+	});
+
+
 });

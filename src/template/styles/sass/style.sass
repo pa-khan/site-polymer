@@ -94,11 +94,19 @@ i
 	position: relative
 	&__wrap
 		display: block
-		font-size: $font-size
+		font-size: 14px
 		font-family: $font-family-1
 		background: white
 		width: 100%
 		resize: none
+	&_border
+		.textarea
+			&__wrap
+				height: 205px
+				border: 1px solid #dedede
+				border-radius: 20px
+				padding: 12px 20px
+				box-shadow: 0 1px 2px rgba(8, 8, 8, 0.08)
 
 .radios
 	display: flex
@@ -161,6 +169,7 @@ i
 				top: 47px !important
 				left: 0 !important
 				right: 0 !important
+				width: 100% !important
 				border-radius: 20px
 				border: 1px solid #dedede
 				box-shadow: 0 1px 2px rgba(8, 8, 8, 0.08)
@@ -190,9 +199,17 @@ i
 	border-radius: 50px
 	&_shadow
 		box-shadow: 0 2px 3px rgba(8, 8, 8, 0.27)
+		&:hover
+			color: #fff
+			background-color: #f9a73b
+			box-shadow: none
 	&_yellow
 		color: #fff
 		background-color: #f9a73b
+		border: 2px solid #f9a73b
+		&:hover
+			color: #f9a73b
+			background-color: #fff
 	&_border-white
 		color: #fff
 		border: 2px solid #fff
@@ -243,7 +260,7 @@ input, .btn, .slick-slide, textarea
 
 
 .main-wrap
-	// overflow-x: hidden
+	overflow-x: hidden
 	max-width: 1920px
 	margin-left: auto
 	margin-right: auto
@@ -252,15 +269,13 @@ input, .btn, .slick-slide, textarea
 
 
 .header
-	min-height: 805px
 	color: #fff
-	background: url('../../img/bg/header.png') no-repeat center top
-	background-size: cover
+	background: url('../../img/bg/header.png') no-repeat center bottom
 	a
 		color: #fff
 	.case
 		padding-top: 125px
-		min-height: 805px
+		min-height: 803px
 	&__lines
 		position: absolute
 		bottom: 0
@@ -280,6 +295,18 @@ input, .btn, .slick-slide, textarea
 	&__calc-btn
 		bottom: 200px
 		left: -36px
+
+	&_subpage
+		.case
+			min-height: 380px
+		.header
+			&__lines
+				.line
+					&:nth-of-type(1)
+						display: none
+			&__calc-btn
+				bottom: 212px
+				left: 430px
 .panel
 	&__logo
 		width: 235px
@@ -379,8 +406,8 @@ input, .btn, .slick-slide, textarea
 	position: absolute
 	&:before
 		content: ''
-		top: -100px
-		left: -100px
+		top: -96px
+		left: -96px
 		border: 1px solid rgba(255,255,255,0.15)
 		position: absolute
 		width: 248px
@@ -398,6 +425,7 @@ input, .btn, .slick-slide, textarea
 	&__btn
 		width: 60px
 		height: 60px
+		border: 2px solid #f9a73b
 		background-color: #f9a73b
 		display: flex
 		align-items: center
@@ -406,6 +434,9 @@ input, .btn, .slick-slide, textarea
 		position: relative
 		z-index: 1
 		cursor: pointer
+		transition: .3s
+		&:hover
+			// transform: scale(.95)
 	&__text
 		font-size: 16px
 		font-weight: 700
@@ -455,7 +486,7 @@ input, .btn, .slick-slide, textarea
 	bottom: 22px
 	left: 15px
 	right: 15px
-	z-index: 1
+	z-index: 10
 	li
 		font-size: 16px
 		font-weight: 500
@@ -502,7 +533,7 @@ input, .btn, .slick-slide, textarea
 			top: 42px
 			left: 0
 			right: 0
-			z-index: 1
+			z-index: 10
 			background-color: #ffab2c
 			border-radius: 20px
 			padding: 12px 0
@@ -524,6 +555,7 @@ input, .btn, .slick-slide, textarea
 				&:last-of-type
 					margin-bottom: 0
 			a
+				display: inline-block
 				font-size: 14px
 				padding: 0 15px
 				border: none
@@ -542,6 +574,8 @@ input, .btn, .slick-slide, textarea
 	
 
 .types
+	position: relative
+	z-index: 1
 	&__nav
 		border-bottom: 1px solid rgba(180,180,180,.55)
 		margin-left: -40px
@@ -582,7 +616,7 @@ input, .btn, .slick-slide, textarea
 			align-items: flex-start
 			flex-wrap: wrap
 			transform: none !important
-			width: calc(100% + 40px) !important
+			width: calc(100% + 50px) !important
 			&:before, &:after
 				display: none
 		.slick-slide
@@ -595,6 +629,11 @@ input, .btn, .slick-slide, textarea
 				width: 245px
 			&:nth-of-type(4)
 				width: 250px
+			&:nth-of-type(5)
+				width: 259px
+				.types__nav-item
+					&:after
+						display: none	
 		.slick-current
 			.types
 				&__nav
@@ -657,6 +696,7 @@ input, .btn, .slick-slide, textarea
 		line-height: 36px
 		font-weight: 500
 		max-width: 350px
+		margin-bottom: 13px
 	&__desc
 		font-weight: 500
 		margin-top: 5px
@@ -722,7 +762,9 @@ input, .btn, .slick-slide, textarea
 		height: 370px
 		box-shadow: 0 0 15px 5px rgba(0,0,0,.1)
 		display: flex
-		padding: 20px 25px
+		align-items: center
+		justify-content: center
+		padding: 13px
 		background-color: #fff
 		&:after
 			content: ''
@@ -753,6 +795,18 @@ input, .btn, .slick-slide, textarea
 		height: 64px
 		background-color: #4a4a4a
 		border-radius: 50%
+	&_right
+		padding-left: 0
+		padding-right: 55px
+		&:before
+			left: auto
+			right: 0
+		.image
+			&__title
+				left: auto
+				right: 85px
+
+
 
 .price
 	display: flex
@@ -793,15 +847,28 @@ input, .btn, .slick-slide, textarea
 	&__text
 		font-size: 12px
 		max-width: 290px
-		a[href*="mailto:"]
+		a[href*="mailto"]
 			color: #ed9829
 			border-color: #ed9829
 			&:hover
 				border-color: transparent
-		
+
+.order
+	color: #fff
+	background-color: #474747
+	padding-left: 30px
+	display: none
+	&__wrap
+		padding-top: 100px
+		padding-bottom: 90px
+		margin-left: -35px
+	&__lines
+		.line
+			height: 100%
+
 .advantages
 	position: relative
-	margin-top: 485px
+	margin-top: 650px
 	color: #fff
 	background-color: #474747
 	&:before
@@ -936,6 +1003,7 @@ input, .btn, .slick-slide, textarea
 		width: 680px
 		background-color: #fff
 		padding: 20px
+		position: relative
 		&-case
 			border: 20px solid #ffa300
 			padding: 35px 50px
@@ -955,14 +1023,34 @@ input, .btn, .slick-slide, textarea
 
 	&__item
 		width: calc(100% - 110px)
-		&.input
+		&.input, &.textarea
 			width: 330px
 	&__text
+		position: relative
+		color: #fff
 		display: flex
 		flex-direction: column
 		justify-content: center
 		padding-left: 150px
 		width: calc(100% - 680px)
+		
+	&__hide
+		font-size: 16px
+		font-weight: 500
+		letter-spacing: 1.6px
+		text-transform: uppercase
+		position: absolute
+		top: 20px
+		left: 150
+		span
+			color: #f3a21b
+			border-bottom: 1px dashed #f3a21b
+			padding-bottom: 3px
+			transition: .3s
+			cursor: pointer
+			&:hover
+				border-color: transparent
+
 		
 
 	&__subtitle
@@ -991,7 +1079,7 @@ input, .btn, .slick-slide, textarea
 
 	&__will-split
 		position: absolute
-		right: 20px
+		left: 65px
 		bottom: -105px
 		width: 285px
 		height: 285px
@@ -1053,7 +1141,7 @@ input, .btn, .slick-slide, textarea
 	padding-top: 45px
 	padding-bottom: 55px
 	&__nav
-		margin-bottom: 60px
+		
 		li
 			display: flex
 			align-items: flex-end
@@ -1077,7 +1165,11 @@ input, .btn, .slick-slide, textarea
 	&__list
 		margin-left: -15px
 		margin-right: -15px
+		margin-top: 60px
+		
+
 	&__item
+		position: relative
 		margin-left: 15px
 		margin-right: 15px
 		width: calc(25% - 30px)
@@ -1101,9 +1193,87 @@ input, .btn, .slick-slide, textarea
 		padding-left: 27px
 		padding-right: 27px
 
+	&_page
+		padding-bottom: 10px
+		.news
+			&__list
+				margin-left: -45px
+				margin-right: -45px
+				margin-top: 30px
+			&__item
+				padding: 30px
+				margin-bottom: 35px
+				&:after
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					right: -15px
+					width: 1px
+					background-color: #dfdfdf
+				&:nth-of-type(4n)
+					&:after
+						display: none
+
+
+.pagination
+	width: 100%
+	padding-bottom: 25px
+	margin-top: -10px
+	ul
+		align-items: center
+		justify-content: center
+	li
+		font-size: 16px
+		font-weight: 500
+		margin-left: 2px
+		margin-right: 2px
+		width: 40px
+		text-align: center
+		&.prev, &.next
+			a
+				width: auto
+		&.selected, &:hover
+			a
+				color: #fff
+				background-color: #ffa92c
+	a
+		width: 40px
+		height: 40px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 5px
+
 
 .page
-	display: none
+	// display: none
+	padding-top: 90px
+	padding-bottom: 85px
+	&__content
+		width: 550px
+		&_full
+			width: 100%
+	&__image
+		margin-left: auto
+	&__date
+		margin-bottom: 12px
+	&__title
+		font-size: 30px
+		font-weight: 500
+		margin-bottom: 10px
+	&__desc
+		margin-bottom: 20px
+		font-weight: 500
+	&__text
+		// font-weight: 500
+		margin-bottom: 25px
+		p
+			margin-bottom: 20px
+			&:last-of-type
+				margin-bottom: 0
+	&__toggle-order
+		max-width: 385px
 
 .date
 	display: flex
@@ -1124,13 +1294,18 @@ input, .btn, .slick-slide, textarea
 	display: inline-flex
 	transition: .3s
 	&__text
-		font-size: 16px
+		font-size: 14px
 		color: #efa23d
-		border-bottom: 1px solid #efa23d
+		border-bottom: 1px dashed #efa23d
 		margin-right: 10px
 		transition: .3s
-		opacity: 0
-		display: none
+		// display: none
+		margin-left: 12px
+		text-transform: uppercase
+		letter-spacing: 1.4px
+		font-weight: 500
+		position: relative
+		top: 2px
 	&__icon
 		@include sprite($arrow-right)
 	&:hover
@@ -1162,9 +1337,55 @@ input, .btn, .slick-slide, textarea
 		z-index: 1
 	&__address
 
+	&__wrap
+		padding-top: 35px
+		padding-right: 65px
+	
+	&__logo
+		margin-left: -9px
+		margin-right: 50px
+		width: 235px
 
+	&__desc
+		font-size: 15px
+		font-weight: 500
+		width: 190px
+		padding-top: 24px
+		margin-right: 50px
+	&__call
+		padding-top: 22px
+		text-align: right
+		width: 280px
+		margin-left: auto
+	&__phone
+		font-size: 30px
+		font-weight: 700
+	&__email
+		font-size: 16px
+		font-weight: 500
+		a
+			color: #f3a21b
+			border-color: #f3a21b
+			&:hover
+				border-color: transparent
+	&__btn
+		width: 230px
+		height: 53px
+		margin-top: 10px
+		margin-left: 23px
 
-
+	&__copy
+		font-size: 15px
+		margin-left: 275px
+		margin-top: 30px
+		padding-bottom: 65px
+	&_subpage
+		.footer
+			&__wrap
+				padding-right: 0
+				padding-top: 80px
+			&__copy
+				padding-bottom: 45px
 .address
 	padding-top: 47px
 	padding-right: 65px
@@ -1214,7 +1435,39 @@ input, .btn, .slick-slide, textarea
 				border-color: transparent
 
 
+.map
+	font-size: 0
+	padding-right: 65px
+	&__arrea
+		height: 400px
+		
 
+
+.popup
+	display: none
+	font-family: $font-family-1
+	padding: 0
+	background-color: transparent
+	overflow: visible
+	cursor: default !important
+	&_large
+		width: 1100px
+	&__close
+		position: absolute
+		top: -35px
+		right: -20px
+		font-size: 24px
+		color: #fff
+		cursor: pointer
+		&:hover
+			color: #f9a73b
+	.fancybox-close-small
+		display: none
+
+.fancybox-is-open .fancybox-bg
+	opacity: 1
+.fancybox-bg
+	background-color: rgba(30,30,30,.9)
 .slick-arrow
 	position: absolute
 	top: 50%
@@ -1222,6 +1475,7 @@ input, .btn, .slick-slide, textarea
 	font-size: 0
 	background: none
 	cursor: pointer
+	z-index: 1
 	&:before, &:after
 		display: block
 		content: ''

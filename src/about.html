@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Полимер - торговый дом</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+<div class="main-wrap">
+	<header class="header header_subpage">
+		<div class="case">
+			<div class="panel row">
+				<div class="panel__logo"><a href=""><img src="upload/logo/logo-white.png" alt=""></a></div>
+				<div class="panel__contacts">
+					<div class="panel__phone"><a href="tel:+74955068493">+7 (495) 506-84-93</a></div>
+					<div class="panel__address">Калужская обл., д. Коллонтай, ул. Производственная, 3</div>
+					<div class="panel__callback"><u><i class="icon icon-phone"></i></u><a data-fancybox data-src="#popup-feedback" href="javascript:;">Заказать обратный звонок</a></div>
+				</div>
+			</div>
+			<div class="hum">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<nav class="nav">
+				<ul>
+					<li class="current"><a href="">О компании</a></li>
+					<li class="has-sub-nav">
+						<a href="">Продукция</a>
+						<ul>
+							<li><a href="">Название 1</a></li>
+							<li><a href="">Название 2</a></li>
+							<li><a href="">Название 3</a></li>
+						</ul>
+					</li>
+					<li><a href="">Услуги</a></li>
+					<li><a href="">Новости и статьи</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header__calc-btn calc-btn">
+				<div class="calc-btn__btn order-btn-open"><i class="icon icon-calc"></i></div>
+			</div>
+			<div class="header__lines lines">
+				<div class="line"></div>
+				<div class="line">
+					<div class="dot"></div>
+				</div>
+				<div class="line">
+					<div class="dot"></div>
+				</div>
+				<div class="line">
+					<div class="dot"></div>
+				</div>
+				<div class="line">
+					<div class="dot"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="order">
+			<div class="case">
+				<div class="order__lines lines">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="order__wrap calc">
+					<div class="calc__wrap">
+						<div class="calc__wrap-case">
+							<div class="calc__line">
+								<div class="calc__title">Ваши Ф.И.О: *</div>
+								<div class="calc__item input input input_border input_text input_capitalize">
+									<input type="text" class="input__wrap">
+								</div>
+							</div>
+							<div class="calc__line">
+								<div class="calc__title">Телефон: *</div>
+								<div class="calc__item input input input_border input_phone input_number">
+									<input type="tel" class="input__wrap">
+								</div>
+							</div>
+							<div class="calc__line calc__line_more">
+								<div class="calc__title">Тип трубы:</div>
+								<div class="calc__item radios">
+									<div class="radio">
+										<input type="radio" class="radio__input" name="type" value="tech" checked="">
+										<label class="radio__title">Техническая</label>
+									</div>
+									<div class="radio">
+										<input type="radio" class="radio__input" name="type" value="pnd">
+										<label class="radio__title">ПНД</label>
+									</div>
+								</div>
+							</div>
+							<div class="calc__line">
+								<div class="calc__title">Параметры:</div>
+								<div class="calc__item params">
+									<div class="params__line">
+										<div class="params__title">Диаметр</div>
+										<div class="params__wrap select select_border">
+											<select data-placeholder="">
+												<option value="0"></option>
+												<option value="1">0.5</option>
+												<option value="2">1</option>
+												<option value="3">2</option>
+												<option value="4">3</option>
+											</select>
+										</div>
+										<div class="params__desc">мм</div>
+									</div>
+									<div class="params__line">
+										<div class="params__title">Толщина стенки</div>
+										<div class="params__wrap select select_border">
+											<select data-placeholder="">
+												<option value="0"></option>
+												<option value="1">0.5</option>
+												<option value="2">1</option>
+												<option value="3">2</option>
+												<option value="4">3</option>
+											</select>
+										</div>
+										<div class="params__desc">мм</div>
+									</div>
+									<div class="params__line">
+										<label class="params__title">Длина</label>
+										<div class="params__wrap input input_border input_number">
+											<input type="text" class="input__wrap">
+										</div>
+										<div class="params__desc">метров</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="calc__text">
+						<div class="calc__hide"><span class="order-btn-close">скрыть</span></div>
+						<div class="calc__subtitle">Рассчитать стоимость</div>
+						<div class="calc__desc">Для наиболее точного расчета рекомендуем заполнить все поля.</div>
+						<div class="calc__btn-wrap">
+							<div class="calc__will-split"></div>
+							<div class="calc__btn btn btn_border-white btn_hover-yellow"><span>расчет</span><u><i class="icon icon-calc"></i></u></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page">
+			<div class="case">
+				<div class="page__wrap row i-top">
+					<div class="page__content">
+						<div class="page__title">ТР Полимер</div>
+						<div class="page__desc">Выражаем свою благодарность за проявленный интерес к нашей компании.</div>
+						<div class="page__text">
+							<p>Торговый дом «Полимер» осуществляет реализацию полиэтиленовых труб, предназначенных для прокладки электрических кабелей.</p>
+							<p>Наша продукция изготавливается на высококачественном оборудовании, благодаря которому мы выпускаем продукцию отличного качества! Производство расположено в д. Коллонтай Калужской области (100 км от МКАД). Склад готовой продукции находиться в г.Одинцово Московской области и д.Коллонтай Калужской области. Основной целью нашей компании является поиск крупных долгосрочных договоров на поставку полиэтиленовых труб.</p>
+							<p>Шесть экструзионных линий способны производить трубы диаметром от 16 мм до 225 мм. Оборудование обеспечивает экструзию, калибрование, охлаждение и резку труб. Осуществляется непрерывный контроль за геометрическими параметрами труб. Все предлагаемые нами товары имеют высокое качество и низкую цену.</p>
+						</div>
+						<div class="page__toggle-order btn btn_yellow btn_normal order-btn-open">Рассчитать стоимость заказа</div>
+					</div>
+					<div class="page__image image image_right">
+						<div class="image__wrap"><img src="upload/image.png" alt=""></div>
+						<div class="image__title">здесь наименование трубы н.п. полиэтиленовая труба</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="case">
+			<div class="footer__lines lines">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+			<div class="footer__address address">
+				<div class="address__title">адрес</div>
+				<div class="address__text">249051 Калужская обл., Малоярославецкий район, д. Коллонтай, ул. Производственная, д. 3</div>
+				<div class="address__link"><a href="">Имеется свой склад в г. Одинцово</a></div>
+			</div>
+			<div class="footer__map map">
+				<div class="map__arrea" id="map"></div>
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+				<script>
+					ymaps.ready(function () {
+				    var myMap = new ymaps.Map('map', {
+				            center: [55.027655, 36.526443],
+				            zoom: 16,
+				            controls: []
+				        }, {
+				            searchControlProvider: 'yandex#search'
+				        }),
+				        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+				            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				        ),
+				        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				            hintContent: '249051 Калужская обл., Малоярославецкий район, д. Коллонтай, ул. Производственная, д. 3',
+				            balloonContent: '249051 Калужская обл., Малоярославецкий район, д. Коллонтай, ул. Производственная, д. 3'
+				        }, {
+				            iconLayout: 'default#image',
+				            iconImageHref: 'i',
+				        }),
+				        myPlacemarkWithContent = new ymaps.Placemark([55.027655, 36.526443], {
+				            hintContent: '249051 Калужская обл., Малоярославецкий район, д. Коллонтай, ул. Производственная, д. 3',
+				            balloonContent: '249051 Калужская обл., Малоярославецкий район, д. Коллонтай, ул. Производственная, д. 3',
+				        });
+				    myMap.geoObjects
+				        .add(myPlacemark)
+				        .add(myPlacemarkWithContent);
+				    myMap.behaviors.disable('scrollZoom');
+				});
+				</script>
+			</div>
+			<div class="footer__wrap row">
+				<div class="footer__logo"><a href=""><img src="upload/logo/logo-black.png" alt=""></a></div>
+				<div class="footer__desc">Производство и продажа <br>технических труб <br>по всей России</div>
+				<div class="footer__call">
+					<div class="footer__phone"><a href="tel:+74955068493">+7 (495) 506-84-93</a></div>
+					<div class="footer__email"><a href="mailto:info@трполимер.рф">info@трполимер.рф</a></div>
+				</div>
+				<a data-fancybox data-src="#popup-feedback" href="javascript:;" class="footer__btn btn btn_yellow btn_normal">обратный звонок</a>
+			</div>
+			<div class="footer__copy">Copyright © 2008-2019. All rights reserved.</div>
+		</div>
+	</footer>
+</div>
+
+<div class="popup popup_large" id="popup-feedback">
+	<div class="popup__wrap calc">
+		<div class="calc__wrap">
+			<div class="calc__wrap-case">
+				<div class="calc__line">
+					<div class="calc__title">Ваши Ф.И.О: *</div>
+					<div class="calc__item input input input_border input_text input_capitalize">
+						<input type="text" class="input__wrap">
+					</div>
+				</div>
+				<div class="calc__line">
+					<div class="calc__title">Телефон: *</div>
+					<div class="calc__item input input input_border input_phone input_number">
+						<input type="tel" class="input__wrap">
+					</div>
+				</div>
+				<div class="calc__line">
+					<div class="calc__title">Сообщение:</div>
+					<div class="calc__item textarea textarea_border">
+						<textarea class="textarea__wrap"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="popup__close calc__x" data-fancybox-close="">x</div>
+		</div>
+		<div class="calc__text">
+			<div class="calc__subtitle">Обратная <br>связь</div>
+			<div class="calc__desc">Напишите нам, и наш менеджер <br>свяжется с Вами в течение <br>ближайшего времени</div>
+			<div class="calc__btn-wrap">
+				<div class="calc__will-split"></div>
+				<div class="calc__btn btn btn_border-white btn_hover-yellow"><span>Отправить</span><u><i class="icon icon-email"></i></u></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
